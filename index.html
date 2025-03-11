@@ -3,138 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>雅典饭店 - 官方网站</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f5f5f5;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .hero {
-            background-image: url('https://via.placeholder.com/1200x500');
-            background-size: cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-        .section {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 20px;
-            background-color: white;
-            max-width: 1200px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        .section img {
-            width: 100%;
-            height: auto;
-            max-width: 500px;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        .btn-primary {
-            background-color: #ff6347;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .btn-primary:hover {
-            background-color: #d4533c;
-        }
-    </style>
+    <title>雅典饭店 - 主页面</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>雅典饭店</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="hotel-detail.html">详细介绍</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>雅典饭店</h1>
-    <p>源于名门，心系雅典</p>
-</header>
+    <main>
+        <section class="intro">
+            <h2>欢迎光临雅典饭店</h2>
+            <p>源于名门，心系雅典！</p>
+            <div class="image-gallery">
+                <a href="hotel-detail.html"><img src="hotel1.jpg" alt="雅典饭店外观" class="hotel-image"></a>
+                <a href="hotel-detail.html"><img src="hotel2.jpg" alt="雅典饭店大堂" class="hotel-image"></a>
+                <a href="hotel-detail.html"><img src="hotel3.jpg" alt="雅典饭店客房" class="hotel-image"></a>
+            </div>
+        </section>
+    </main>
 
-<nav>
-    <a href="#home">首页</a>
-    <a href="#about">关于我们</a>
-    <a href="#rooms">客房</a>
-    <a href="#dining">餐饮</a>
-    <a href="#facilities">设施</a>
-    <a href="#service">服务</a>
-</nav>
-
-<div class="hero">
-    <h2>欢迎光临雅典饭店</h2>
-    <p>在老挝万象的繁华中心，静静绽放着五星级的魅力。</p>
-</div>
-
-<div class="section" id="about">
-    <div>
-        <img src="https://via.placeholder.com/500x300" alt="雅典饭店外观" onclick="window.location.href='about.html'">
-        <p><strong>关于我们</strong></p>
-    </div>
-    <div>
-        <img src="https://via.placeholder.com/500x300" alt="酒店客房" onclick="window.location.href='rooms.html'">
-        <p><strong>客房</strong></p>
-    </div>
-</div>
-
-<div class="section" id="dining">
-    <div>
-        <img src="https://via.placeholder.com/500x300" alt="餐饮" onclick="window.location.href='dining.html'">
-        <p><strong>餐饮</strong></p>
-    </div>
-    <div>
-        <img src="https://via.placeholder.com/500x300" alt="酒店设施" onclick="window.location.href='facilities.html'">
-        <p><strong>设施</strong></p>
-    </div>
-</div>
-
-<div class="section" id="service">
-    <div>
-        <img src="https://via.placeholder.com/500x300" alt="酒店服务" onclick="window.location.href='service.html'">
-        <p><strong>服务</strong></p>
-    </div>
-</div>
-
-<a href="#contact" class="btn-primary">联系我们</a>
-
-<footer>
-    <p>&copy; 2025 雅典饭店 | 所有权利保留</p>
-    <p>地址: 老挝万象市大街123号</p>
-    <p>电话: +856 20 123 456</p>
-    <p>邮箱: contact@athenshotel.la</p>
-</footer>
-
+    <footer>
+        <p>联系方式：<br>电话：+856 21 123 456<br>地址：老挝万象市中心</p>
+    </footer>
 </body>
 </html>
