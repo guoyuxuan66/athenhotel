@@ -2,58 +2,75 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>雅典饭店 - 老挝万象五星级酒店</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雅典饭店 | 万象五星级酒店</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>雅典饭店</h1>
-        <p>老挝万象五星级奢华体验</p>
+    <!-- 页眉 -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1>雅典饭店</h1>
+            <p class="subtitle">源于名门，心系雅典</p>
+        </div>
     </header>
 
-    <section class="gallery">
-        <div class="card">
-            <a href="about.html">
-                <img src="images/exterior.jpg" alt="酒店外观">
-                <h3>恢弘建筑</h3>
+    <!-- 特色导览 -->
+    <section class="feature-grid">
+        <article class="feature-card">
+            <a href="architecture.html">
+                <img src="images/exterior-main.jpg" alt="酒店建筑">
+                <div class="card-overlay">
+                    <h3>恢弘建筑</h3>
+                </div>
             </a>
-        </div>
-        
-        <div class="card">
+        </article>
+
+        <article class="feature-card">
             <a href="rooms.html">
-                <img src="images/room.jpg" alt="豪华客房">
-                <h3>精致客房</h3>
+                <img src="images/suite-main.jpg" alt="豪华客房">
+                <div class="card-overlay">
+                    <h3>尊贵客房</h3>
+                </div>
             </a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="feature-card">
             <a href="dining.html">
-                <img src="images/dining.jpg" alt="餐厅环境">
-                <h3>美食盛宴</h3>
+                <img src="images/restaurant-main.jpg" alt="餐饮体验">
+                <div class="card-overlay">
+                    <h3>美食体验</h3>
+                </div>
             </a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="feature-card">
             <a href="facilities.html">
-                <img src="images/pool.jpg" alt="泳池设施">
-                <h3>休闲设施</h3>
+                <img src="images/pool-main.jpg" alt="休闲设施">
+                <div class="card-overlay">
+                    <h3>休闲设施</h3>
+                </div>
             </a>
-        </div>
-
-        <div class="card">
-            <a href="services.html">
-                <img src="images/service.jpg" alt="酒店服务">
-                <h3>尊贵服务</h3>
-            </a>
-        </div>
+        </article>
     </section>
 
-    <footer>
-        <div class="contact">
-            <h4>联系我们</h4>
-            <p>地址：老挝万象市中心雅典大道1号</p>
-            <p>电话：+856-21-1234567</p>
-            <p>邮箱：info@athenahotel.la</p>
+    <!-- 页脚 -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="contact-info">
+                <h4>联系我们</h4>
+                <address>
+                    <p>📍 老挝万象市中心雅典大道1号</p>
+                    <p>📞 +856-21-1234567</p>
+                    <p>📧 info@athenahotel.la</p>
+                </address>
+            </div>
+            <div class="map-container">
+                <iframe src="https://maps.example.com" 
+                        style="border:0" 
+                        allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </footer>
 </body>
