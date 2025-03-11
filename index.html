@@ -1,36 +1,48 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雅典饭店 - 主页面</title>
+    <title>雅典饭店官网</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>雅典饭店</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="hotel-detail.html">详细介绍</a></li>
-            </ul>
-        </nav>
+        <p>源于名门，心系雅典！</p>
     </header>
 
-    <main>
-        <section class="intro">
-            <h2>欢迎光临雅典饭店</h2>
-            <p>源于名门，心系雅典！</p>
-            <div class="image-gallery">
-                <a href="hotel-detail.html"><img src="hotel1.jpg" alt="雅典饭店外观" class="hotel-image"></a>
-                <a href="hotel-detail.html"><img src="hotel2.jpg" alt="雅典饭店大堂" class="hotel-image"></a>
-                <a href="hotel-detail.html"><img src="hotel3.jpg" alt="雅典饭店客房" class="hotel-image"></a>
-            </div>
-        </section>
-    </main>
+    <section class="gallery">
+        <div class="gallery-item">
+            <a href="room.html">
+                <img src="room.jpg" alt="客房">
+                <p>客房</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="restaurant.html">
+                <img src="restaurant.jpg" alt="餐饮">
+                <p>餐饮</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="leisure.html">
+                <img src="leisure.jpg" alt="休闲设施">
+                <p>休闲设施</p>
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="service.html">
+                <img src="service.jpg" alt="服务">
+                <p>服务</p>
+            </a>
+        </div>
+    </section>
 
     <footer>
-        <p>联系方式：<br>电话：+856 21 123 456<br>地址：老挝万象市中心</p>
+        <p>地址：老挝万象市，雅典饭店</p>
+        <p>电话：+856 21 123 456</p>
+        <p>Email: contact@athenshotel.com</p>
     </footer>
 </body>
 </html>
