@@ -1,193 +1,146 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雅典饭店 - 老挝万象五星级酒店</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>雅典饭店 - 官方网站</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', '微软雅黑', sans-serif;
+            background-color: #f5f5f5;
         }
-
-        body {
-            line-height: 1.6;
-            color: #333;
-        }
-
-        .header {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                        url('https://picsum.photos/1920/800?hotel') center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+        header {
+            background-color: #333;
             color: white;
             padding: 20px;
-        }
-
-        .header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: #2c3e50;
         }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .feature-box {
+        nav {
             display: flex;
-            align-items: center;
-            gap: 30px;
-            margin: 40px 0;
+            justify-content: center;
+            background-color: #444;
         }
-
-        .feature-box.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .feature-text {
-            flex: 1;
-        }
-
-        .feature-img {
-            flex: 1;
-            height: 400px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .feature-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .amenities {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-
-        .footer {
-            background: #2c3e50;
+        nav a {
             color: white;
-            padding: 40px 20px;
+            padding: 14px 20px;
+            text-decoration: none;
             text-align: center;
         }
-
-        @media (max-width: 768px) {
-            .feature-box {
-                flex-direction: column;
-            }
-            .feature-img {
-                width: 100%;
-                height: 300px;
-            }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x500');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .content {
+            padding: 40px 20px;
+            background-color: white;
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .content p {
+            line-height: 1.8;
+            font-size: 16px;
+            color: #333;
+        }
+        .content img {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn-primary {
+            background-color: #ff6347;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .btn-primary:hover {
+            background-color: #d4533c;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div>
-            <h1>雅典饭店</h1>
-            <p>老挝万象五星级奢华体验</p>
-        </div>
-    </header>
 
-    <section class="section">
-        <h2 class="section-title">酒店概览</h2>
-        <div class="gallery">
-            <img src="https://picsum.photos/400/300?lobby" alt="大堂">
-            <img src="https://picsum.photos/401/300?building" alt="建筑外观">
-            <img src="https://picsum.photos/402/300?pool" alt="泳池">
-        </div>
-    </section>
+<header>
+    <h1>雅典饭店</h1>
+    <p>源于名门，心系雅典</p>
+</header>
 
-    <section class="section">
-        <h2 class="section-title">奢华客房</h2>
-        <div class="feature-box">
-            <div class="feature-img">
-                <img src="https://picsum.photos/600/400?room" alt="客房">
-            </div>
-            <div class="feature-text">
-                <h3>全景尊贵客房</h3>
-                <p>每间客房均配备全景落地窗，融合现代智能家居系统，精选优质床品，为您打造云端睡眠体验。</p>
-            </div>
-        </div>
-    </section>
+<nav>
+    <a href="#home">首页</a>
+    <a href="#about">关于我们</a>
+    <a href="#rooms">客房</a>
+    <a href="#dining">餐饮</a>
+    <a href="#facilities">设施</a>
+    <a href="#contact">联系我们</a>
+</nav>
 
-    <section class="section">
-        <h2 class="section-title">美食盛宴</h2>
-        <div class="feature-box reverse">
-            <div class="feature-img">
-                <img src="https://picsum.photos/601/400?restaurant" alt="餐厅">
-            </div>
-            <div class="feature-text">
-                <h3>环球美食体验</h3>
-                <p>从地道中式佳肴到国际风味美食，多个特色餐厅满足不同味蕾需求，打造难忘的餐饮体验。</p>
-            </div>
-        </div>
-    </section>
+<div class="hero">
+    <h2>欢迎光临雅典饭店</h2>
+    <p>在老挝万象的繁华中心，静静绽放着五星级的魅力</p>
+</div>
 
-    <section class="section">
-        <h2 class="section-title">休闲设施</h2>
-        <div class="amenities">
-            <div>
-                <img src="https://picsum.photos/200/200?gym" alt="健身房" style="border-radius:50%">
-                <h3>健身中心</h3>
-                <p>配备先进器材的24小时健身房</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/201/200?pool" alt="泳池" style="border-radius:50%">
-                <h3>无边际泳池</h3>
-                <p>俯瞰城市天际线的休闲胜地</p>
-            </div>
-            <div>
-                <img src="https://picsum.photos/202/200?meeting" alt="会议室" style="border-radius:50%">
-                <h3>会议设施</h3>
-                <p>智能化多功能会议空间</p>
-            </div>
-        </div>
-    </section>
+<div class="content" id="about">
+    <h2>关于我们</h2>
+    <img src="https://via.placeholder.com/1200x600" alt="雅典饭店外观">
+    <p>在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
+</div>
 
-    <footer class="footer">
-        <p>地址：老挝万象市中心雅典大道1号</p>
-        <p>电话：+856-21-1234567 | 邮箱：info@athenahotel.la</p>
-        <p>© 2023 雅典饭店 版权所有</p>
-    </footer>
+<div class="content" id="rooms">
+    <h2>客房</h2>
+    <img src="https://via.placeholder.com/1200x600" alt="酒店客房">
+    <p>客房是雅典饭店的一大亮点。每间客房都经过精心设计，宽敞明亮，全景落地窗不仅让充足的阳光洒满房间，还能让宾客将万象的城市风光或自然美景尽收眼底。柔软舒适的大床搭配高品质床品，助您一夜好眠；智能化的家居设备，满足您对便捷生活的所有需求。</p>
+</div>
+
+<div class="content" id="dining">
+    <h2>餐饮</h2>
+    <img src="https://via.placeholder.com/1200x600" alt="餐饮美食">
+    <p>餐饮方面，这里拥有多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
+</div>
+
+<div class="content" id="facilities">
+    <h2>设施</h2>
+    <img src="https://via.placeholder.com/1200x600" alt="酒店设施">
+    <p>酒店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。</p>
+    <p>此外，雅典饭店还设有功能齐全的会议室，先进的视听设备和高速网络，能满足各类商务会议和活动的需求。</p>
+</div>
+
+<div class="content" id="service">
+    <h2>我们的服务</h2>
+    <img src="https://via.placeholder.com/1200x600" alt="酒店服务">
+    <p>专业周到的服务是雅典饭店的金字招牌。工作人员热情友好、细心体贴，从入住到退房，每一个环节都为您考虑周全，致力于为您打造一段舒适、难忘的入住体验，让您在异国他乡也能感受到家的温暖。</p>
+</div>
+
+<a href="#contact" class="btn-primary">联系我们</a>
+
+<footer>
+    <p>&copy; 2025 雅典饭店 | 所有权利保留</p>
+</footer>
+
 </body>
 </html>
