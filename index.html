@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden;
         }
         header {
             background-color: #333;
@@ -25,22 +26,21 @@
         h1, h2 {
             color: #333;
         }
-        .intro {
-            text-align: center;
-            margin-bottom: 20px;
+        .intro, .section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
         }
-        .intro img {
+        .intro img, .section img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
+        }
+        .intro img {
             border-radius: 10px;
         }
         .section {
             margin-bottom: 30px;
-        }
-        .section img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
         }
         .section p {
             font-size: 1.1em;
@@ -55,6 +55,11 @@
             bottom: 0;
             width: 100%;
         }
+        /* 动画效果 */
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -65,42 +70,42 @@
 
     <div class="container">
         <!-- 图片介绍 -->
-        <div class="intro">
+        <div class="intro" id="intro">
             <img src="your-image-link-here.jpg" alt="雅典饭店外观">
             <h2>源于名门，心系雅典</h2>
             <p>在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。</p>
         </div>
 
         <!-- 酒店外观 -->
-        <div class="section">
+        <div class="section" id="section1">
             <h2>酒店外观</h2>
             <img src="your-image-link-here.jpg" alt="雅典饭店外观">
             <p>从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
         </div>
 
         <!-- 客房 -->
-        <div class="section">
+        <div class="section" id="section2">
             <h2>雅典饭店客房</h2>
             <img src="your-image-link-here.jpg" alt="雅典饭店客房">
             <p>客房是雅典饭店的一大亮点。每间客房都经过精心设计，宽敞明亮，全景落地窗不仅让充足的阳光洒满房间，还能让宾客将万象的城市风光或自然美景尽收眼底。柔软舒适的大床搭配高品质床品，助您一夜好眠；智能化的家居设备，满足您对便捷生活的所有需求。</p>
         </div>
 
         <!-- 餐饮 -->
-        <div class="section">
+        <div class="section" id="section3">
             <h2>餐饮</h2>
             <img src="your-image-link-here.jpg" alt="雅典饭店餐厅">
             <p>餐饮方面，这里拥有多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
         </div>
 
         <!-- 休闲设施 -->
-        <div class="section">
+        <div class="section" id="section4">
             <h2>休闲设施</h2>
             <img src="your-image-link-here.jpg" alt="雅典饭店休闲设施">
             <p>酒店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。</p>
         </div>
 
         <!-- 服务 -->
-        <div class="section">
+        <div class="section" id="section5">
             <h2>专业服务</h2>
             <img src="your-image-link-here.jpg" alt="雅典饭店服务">
             <p>专业周到的服务是雅典饭店的金字招牌。工作人员热情友好、细心体贴，从入住到退房，每一个环节都为您考虑周全，致力于为您打造一段舒适、难忘的入住体验，让您在异国他乡也能感受到家的温暖。</p>
@@ -110,6 +115,34 @@
     <footer>
         <p>&copy; 2025 雅典饭店 | 版权所有</p>
     </footer>
+
+    <script>
+        // 使用Intersection Observer来监测元素是否进入视口
+        const sections = document.querySelectorAll('.section, .intro');
+        
+        const observerOptions = {
+            root: null, 
+            rootMargin: '0px', 
+            threshold: 0.2 
+        };
+
+        // 回调函数：当元素进入视口时，触发动画
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        // 观察每个需要显示动画的元素
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 
 </body>
 </html>
