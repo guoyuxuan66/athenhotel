@@ -42,7 +42,9 @@
             text-align: center;
             padding: 100px 20px;
         }
-        .content {
+        .section {
+            display: flex;
+            justify-content: space-around;
             padding: 40px 20px;
             background-color: white;
             max-width: 1200px;
@@ -50,21 +52,12 @@
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .content h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        .content p {
-            line-height: 1.8;
-            font-size: 16px;
-            color: #333;
-        }
-        .content img {
+        .section img {
             width: 100%;
             height: auto;
-            margin: 20px 0;
+            max-width: 500px;
             border-radius: 8px;
+            cursor: pointer;
         }
         footer {
             background-color: #333;
@@ -97,49 +90,50 @@
     <a href="#rooms">客房</a>
     <a href="#dining">餐饮</a>
     <a href="#facilities">设施</a>
-    <a href="#contact">联系我们</a>
+    <a href="#service">服务</a>
 </nav>
 
 <div class="hero">
     <h2>欢迎光临雅典饭店</h2>
-    <p>在老挝万象的繁华中心，静静绽放着五星级的魅力</p>
+    <p>在老挝万象的繁华中心，静静绽放着五星级的魅力。</p>
 </div>
 
-<div class="content" id="about">
-    <h2>关于我们</h2>
-    <img src="https://via.placeholder.com/1200x600" alt="雅典饭店外观">
-    <p>在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
+<div class="section" id="about">
+    <div>
+        <img src="https://via.placeholder.com/500x300" alt="雅典饭店外观" onclick="window.location.href='about.html'">
+        <p><strong>关于我们</strong></p>
+    </div>
+    <div>
+        <img src="https://via.placeholder.com/500x300" alt="酒店客房" onclick="window.location.href='rooms.html'">
+        <p><strong>客房</strong></p>
+    </div>
 </div>
 
-<div class="content" id="rooms">
-    <h2>客房</h2>
-    <img src="https://via.placeholder.com/1200x600" alt="酒店客房">
-    <p>客房是雅典饭店的一大亮点。每间客房都经过精心设计，宽敞明亮，全景落地窗不仅让充足的阳光洒满房间，还能让宾客将万象的城市风光或自然美景尽收眼底。柔软舒适的大床搭配高品质床品，助您一夜好眠；智能化的家居设备，满足您对便捷生活的所有需求。</p>
+<div class="section" id="dining">
+    <div>
+        <img src="https://via.placeholder.com/500x300" alt="餐饮" onclick="window.location.href='dining.html'">
+        <p><strong>餐饮</strong></p>
+    </div>
+    <div>
+        <img src="https://via.placeholder.com/500x300" alt="酒店设施" onclick="window.location.href='facilities.html'">
+        <p><strong>设施</strong></p>
+    </div>
 </div>
 
-<div class="content" id="dining">
-    <h2>餐饮</h2>
-    <img src="https://via.placeholder.com/1200x600" alt="餐饮美食">
-    <p>餐饮方面，这里拥有多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
-</div>
-
-<div class="content" id="facilities">
-    <h2>设施</h2>
-    <img src="https://via.placeholder.com/1200x600" alt="酒店设施">
-    <p>酒店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。</p>
-    <p>此外，雅典饭店还设有功能齐全的会议室，先进的视听设备和高速网络，能满足各类商务会议和活动的需求。</p>
-</div>
-
-<div class="content" id="service">
-    <h2>我们的服务</h2>
-    <img src="https://via.placeholder.com/1200x600" alt="酒店服务">
-    <p>专业周到的服务是雅典饭店的金字招牌。工作人员热情友好、细心体贴，从入住到退房，每一个环节都为您考虑周全，致力于为您打造一段舒适、难忘的入住体验，让您在异国他乡也能感受到家的温暖。</p>
+<div class="section" id="service">
+    <div>
+        <img src="https://via.placeholder.com/500x300" alt="酒店服务" onclick="window.location.href='service.html'">
+        <p><strong>服务</strong></p>
+    </div>
 </div>
 
 <a href="#contact" class="btn-primary">联系我们</a>
 
 <footer>
     <p>&copy; 2025 雅典饭店 | 所有权利保留</p>
+    <p>地址: 老挝万象市大街123号</p>
+    <p>电话: +856 20 123 456</p>
+    <p>邮箱: contact@athenshotel.la</p>
 </footer>
 
 </body>
