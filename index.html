@@ -4,213 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雅典饭店官网</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- 引入Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
 
-        /* Top Navigation Bar */
+        /* 导航栏样式 */
         nav {
             background-color: #333;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            padding: 10px 0;
             z-index: 1000;
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
+        nav a {
             color: white;
-            text-decoration: none;
-            font-size: 1.2em;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
         }
 
-        nav ul li a:hover {
-            background-color: #555;
-            border-radius: 5px;
+        nav a:hover {
+            color: #ddd;
         }
 
-        /* Header Section */
-        header {
-            background-image: url('https://source.unsplash.com/1920x1080/?luxury-hotel');
-            background-size: cover;
-            background-position: center;
-            padding: 80px 20px;
-            color: white;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-            color: black; /* Black color for hotel name */
+        /* 各部分背景颜色 */
+        #about {
+            background-color: #f8f9fa; /* 酒店简介部分 */
+            padding: 60px 20px;
         }
 
-        header p {
-            font-size: 1.5em;
-            margin-top: 10px;
-            color: black; /* Black color for slogan */
+        #rooms {
+            background-color: #e9ecef; /* 客房设施部分 */
+            padding: 60px 20px;
         }
 
-        /* Section Titles */
+        #dining {
+            background-color: #f1f3f5; /* 餐饮美食部分 */
+            padding: 60px 20px;
+        }
+
+        #facilities {
+            background-color: #e2e6ea; /* 休闲设施部分 */
+            padding: 60px 20px;
+        }
+
         .section-title {
             text-align: center;
             font-size: 2.5em;
-            margin: 40px 0;
+            margin-bottom: 20px;
             color: #333;
         }
 
-        /* Section Content */
-        .section-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .facility img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .hotel-intro, .facilities, .services {
-            margin-bottom: 60px;
-        }
-
-        .hotel-intro p, .facilities p, .services p {
-            font-size: 1.1em;
-            line-height: 1.8em;
-        }
-
-        /* Facility List */
-        .facility {
-            list-style: none;
-            padding: 0;
-        }
-
-        .facility-item {
-            margin-bottom: 40px;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-
-        footer p {
-            font-size: 1em;
-        }
-
-        /* Smooth scrolling effect */
+        /* 平滑滚动 */
         html {
             scroll-behavior: smooth;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 60px 20px;
-            }
-
-            .section-title {
-                font-size: 2em;
-            }
-
-            nav ul li a {
-                font-size: 1em;
-            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#intro">关于我们</a></li>
-            <li><a href="#facilities">酒店设施</a></li>
-            <li><a href="#services">专业服务</a></li>
-        </ul>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">雅典饭店</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">酒店简介</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rooms">客房设施</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dining">餐饮美食</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#facilities">休闲设施</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Header Section -->
-    <header>
-        <h1>雅典饭店</h1>
-        <p>源于名门，心系雅典！</p>
-    </header>
-
-    <!-- Hotel Introduction Section -->
-    <div class="section-content hotel-intro" id="intro">
-        <h2 class="section-title">关于雅典饭店</h2>
-        <p>雅典饭店位于老挝万象的繁华中心，犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
+    <!-- 酒店简介部分 -->
+    <div id="about">
+        <h2 class="section-title">酒店简介</h2>
+        <p>欢迎来到雅典饭店，我们提供豪华舒适的住宿环境与高品质的服务，让您享受一个独特的旅行体验。</p>
     </div>
 
-    <!-- Hotel Facilities Section -->
-    <div class="section-content facilities" id="facilities">
-        <h2 class="section-title">酒店设施</h2>
-        <ul class="facility">
-            <li class="facility-item">
-                <img src="https://source.unsplash.com/800x600/?hotel-room" alt="精致客房">
-                <h3>精致客房</h3>
-                <p>每间客房都经过精心设计，宽敞明亮，拥有全景落地窗，让您尽享万象的美景。柔软的大床和高品质床品让您一夜安眠。</p>
-            </li>
-            <li class="facility-item">
-                <img src="https://source.unsplash.com/800x600/?restaurant" alt="餐饮">
-                <h3>精致餐饮</h3>
-                <p>雅典饭店提供多个特色餐厅，精致的中餐包间和世界各地美食的自助餐厅，满足您的各种味蕾需求。</p>
-            </li>
-            <li class="facility-item">
-                <img src="https://source.unsplash.com/800x600/?fitness" alt="健身中心">
-                <h3>健身中心</h3>
-                <p>先进的健身设施和设备，为您的健康保驾护航，让您在旅行中保持活力。</p>
-            </li>
-            <li class="facility-item">
-                <img src="https://source.unsplash.com/800x600/?swimming-pool" alt="泳池">
-                <h3>无边泳池</h3>
-                <p>清澈湛蓝的无边泳池是休闲放松的绝佳去处，您可以在泳池中尽情畅游，享受惬意时光。</p>
-            </li>
-            <li class="facility-item">
-                <img src="https://source.unsplash.com/800x600/?conference-room" alt="会议室">
-                <h3>功能齐全的会议室</h3>
-                <p>设施齐全的会议室，配备了先进的视听设备和高速网络，适用于各类商务会议和活动。</p>
-            </li>
-        </ul>
+    <!-- 客房设施部分 -->
+    <div id="rooms">
+        <h2 class="section-title">客房设施</h2>
+        <p>我们的客房设施一应俱全，提供不同类型的客房，满足不同客人的需求。</p>
     </div>
 
-    <!-- Professional Service Section -->
-    <div class="section-content services" id="services">
-        <h2 class="section-title">专业服务</h2>
-        <p>雅典饭店的工作人员热情友好、细心体贴。无论您是入住还是退房，我们始终在每一个环节为您提供贴心的服务，确保您在这里拥有舒适、难忘的住宿体验。</p>
+    <!-- 餐饮美食部分 -->
+    <div id="dining">
+        <h2 class="section-title">餐饮美食</h2>
+        <p>我们提供世界各地的美食，精致的餐厅为您带来不一样的味蕾体验。</p>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 雅典饭店 | 所有权利保留</p>
-    </footer>
+    <!-- 休闲设施部分 -->
+    <div id="facilities">
+        <h2 class="section-title">休闲设施</h2>
+        <p>酒店内设有豪华的健身中心、游泳池及其他休闲设施，供您放松身心。</p>
+    </div>
+
+    <!-- 引入Bootstrap和自定义JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
