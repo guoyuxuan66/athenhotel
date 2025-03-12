@@ -1,81 +1,104 @@
-/* 基础样式 */
+/* 通用样式 */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9; /* 浅灰色背景 */
   color: #333;
 }
 
-h1, h2 {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  color: white;
-}
-
-/* 页面各部分样式 */
-.section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  transition: opacity 1s ease;
-}
-
-.section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.overlay-text h2 {
-  font-size: 2rem;
-}
-
-.overlay-text a {
-  color: white;
-  text-decoration: none;
-  font-size: 2.5rem;
+h1, h2, h3 {
   font-weight: bold;
 }
 
-/* 详细页面样式 */
-.detail-page {
+/* 导航栏样式 */
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.detail-image img {
-  width: 100%;
-  max-width: 900px;
+.navbar .logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ff8c00; /* 橙色悬停 */
+}
+
+/* 主视觉区域 */
+.hero {
+  background-image: url('assets/images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero-text {
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
-.detail-content {
-  max-width: 900px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.detail-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.detail-content p {
+.cta-button {
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
   font-size: 1.2rem;
-  line-height: 1.6;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #ff6600;
+}
+
+/* 关于部分 */
+.section {
+  padding: 50px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.1rem;
   color: #666;
 }
 
@@ -87,34 +110,21 @@ footer {
   padding: 20px;
 }
 
+footer p {
+  font-size: 1rem;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
-  .overlay-text h2 {
-    font-size: 1.5rem;
+  .hero h1 {
+    font-size: 2.5rem;
   }
 
-  .overlay-text a {
-    font-size: 2rem;
+  .hero p {
+    font-size: 1.2rem;
   }
 
-  .detail-content h1 {
-    font-size: 2rem;
-  }
-
-  .detail-content p {
+  .cta-button {
     font-size: 1rem;
   }
-}
-
-a:hover {
-  color: #ff8c00;
-}
-/* 滚动动画效果 */
-.section.fade-in {
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.section {
-  opacity: 0;
 }
