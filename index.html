@@ -13,7 +13,42 @@
             background-color: #f4f4f9;
             color: #333;
         }
-        
+
+        /* Top Navigation Bar */
+        nav {
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
         /* Header Section */
         header {
             background-image: url('https://source.unsplash.com/1920x1080/?luxury-hotel');
@@ -33,7 +68,7 @@
         header p {
             font-size: 1.5em;
             margin-top: 10px;
-            color: white;
+            color: black; /* Black color for slogan */
         }
 
         /* Section Titles */
@@ -41,6 +76,7 @@
             text-align: center;
             font-size: 2.5em;
             margin: 40px 0;
+            color: #333;
         }
 
         /* Section Content */
@@ -90,6 +126,11 @@
             font-size: 1em;
         }
 
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
         @media (max-width: 768px) {
             header {
                 padding: 60px 20px;
@@ -98,10 +139,23 @@
             .section-title {
                 font-size: 2em;
             }
+
+            nav ul li a {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Top Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#intro">关于我们</a></li>
+            <li><a href="#facilities">酒店设施</a></li>
+            <li><a href="#services">专业服务</a></li>
+        </ul>
+    </nav>
 
     <!-- Header Section -->
     <header>
@@ -110,13 +164,13 @@
     </header>
 
     <!-- Hotel Introduction Section -->
-    <div class="section-content hotel-intro">
+    <div class="section-content hotel-intro" id="intro">
         <h2 class="section-title">关于雅典饭店</h2>
         <p>雅典饭店位于老挝万象的繁华中心，犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
     </div>
 
     <!-- Hotel Facilities Section -->
-    <div class="section-content facilities">
+    <div class="section-content facilities" id="facilities">
         <h2 class="section-title">酒店设施</h2>
         <ul class="facility">
             <li class="facility-item">
@@ -148,7 +202,7 @@
     </div>
 
     <!-- Professional Service Section -->
-    <div class="section-content services">
+    <div class="section-content services" id="services">
         <h2 class="section-title">专业服务</h2>
         <p>雅典饭店的工作人员热情友好、细心体贴。无论您是入住还是退房，我们始终在每一个环节为您提供贴心的服务，确保您在这里拥有舒适、难忘的住宿体验。</p>
     </div>
