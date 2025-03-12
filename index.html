@@ -53,7 +53,7 @@
         }
 
         .gallery-img {
-            height: 400px;
+            height: 300px;
             object-fit: cover;
             transition: transform 0.3s;
         }
@@ -82,6 +82,19 @@
 
         .animate {
             animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* 优化并排布局 */
+        .image-row .col-md-6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-row .gallery-img {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 0.5rem;
         }
     </style>
 </head>
@@ -117,12 +130,13 @@
     <section id="about" class="py-5">
         <div class="container text-center">
             <h2 class="section-title animate">酒店简介</h2>
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center image-row">
+                <!-- 并排两张图片 -->
                 <div class="col-md-6 animate" data-delay="0.2">
-                    <img src="pic/3.png" alt="大堂" class="img-fluid rounded gallery-img">
+                    <img src="pic/3.png" alt="大堂" class="gallery-img">
                 </div>
                 <div class="col-md-6 animate" data-delay="0.4">
-                    <p class="lead">雅典饭店坐落于老挝万象繁华中心，以现代设计美学融合传统待客之道，打造极致奢华体验。挑高十米的酒店大堂配以艺术装饰，彰显非凡格调。</p>
+                    <img src="pic/4.png" alt="酒店外景" class="gallery-img">
                 </div>
             </div>
         </div>
@@ -136,7 +150,6 @@
                 <div class="col-md-4 animate">
                     <div class="card feature-card h-100">
                         <img src="pic/6.png" class="card-img-top gallery-img" alt="餐厅">
-                        <img src="pic/7.png" class="card-img-top gallery-img" alt="餐厅">
                         <div class="card-body">
                             <h5 class="card-title">高级餐厅</h5>
                             <p class="card-text">多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
@@ -156,10 +169,9 @@
                 <div class="col-md-4 animate">
                     <div class="card feature-card h-100">
                         <img src="pic/9.png" class="card-img-top gallery-img" alt="无边泳池">
-                        <img src="pic/10.png" class="card-img-top gallery-img" alt="高级会议室">
                         <div class="card-body">
                             <h5 class="card-title">休闲设施</h5>
-                            <p class="card-text">店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。此外，雅典饭店还设有功能齐全的会议室，先进的视听设备和高速网络，能满足各类商务会议和活动的需求。</p>
+                            <p class="card-text">店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。</p>
                         </div>
                     </div>
                 </div>
