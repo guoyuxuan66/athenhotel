@@ -1,68 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雅典饭店官网</title>
-    <!-- 引入Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>雅典饭店 - 老挝万象五星级酒店</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
-        /* 导航栏样式 */
-        nav {
-            background-color: #333;
-            z-index: 1000;
-        }
-
-        nav a {
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://source.unsplash.com/random/1920x1080/?luxury-hotel') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             color: white;
         }
 
-        nav a:hover {
-            color: #ddd;
-        }
-
-        /* 各部分背景颜色 */
-        #about {
-            background-color: #f8f9fa; /* 酒店简介部分 */
-            padding: 60px 20px;
-        }
-
-        #rooms {
-            background-color: #e9ecef; /* 客房设施部分 */
-            padding: 60px 20px;
-        }
-
-        #dining {
-            background-color: #f1f3f5; /* 餐饮美食部分 */
-            padding: 60px 20px;
-        }
-
-        #facilities {
-            background-color: #e2e6ea; /* 休闲设施部分 */
-            padding: 60px 20px;
-        }
-
         .section-title {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 1rem;
+            margin: 3rem 0;
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
         }
 
-        /* 平滑滚动 */
-        html {
-            scroll-behavior: smooth;
+        .feature-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .amenities-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-img {
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .navbar {
+            background: rgba(255,255,255,0.95) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeInUp 0.8s ease-out forwards;
         }
     </style>
 </head>
 <body>
-
     <!-- 导航栏 -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
@@ -81,32 +104,93 @@
         </div>
     </nav>
 
-    <!-- 酒店简介部分 -->
-    <div id="about">
-        <h2 class="section-title">酒店简介</h2>
-        <p>欢迎来到雅典饭店，我们提供豪华舒适的住宿环境与高品质的服务，让您享受一个独特的旅行体验。</p>
-    </div>
+    <!-- 首屏大图 -->
+    <section class="hero-section">
+        <div class="container text-center animate">
+            <h1 class="display-4 fw-bold mb-4">雅典饭店</h1>
+            <p class="lead">万象市中心五星级奢华体验</p>
+            <p class="h5">源于名门，心系雅典</p>
+        </div>
+    </section>
 
-    <!-- 客房设施部分 -->
-    <div id="rooms">
-        <h2 class="section-title">客房设施</h2>
-        <p>我们的客房设施一应俱全，提供不同类型的客房，满足不同客人的需求。</p>
-    </div>
+    <!-- 酒店简介 -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title animate">酒店简介</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 animate" data-delay="0.2">
+                    <img src="pic/3.png" alt="大堂" class="img-fluid rounded gallery-img">
+                </div>
+                <div class="col-md-6 animate" data-delay="0.4">
+                    <p class="lead">雅典饭店坐落于老挝万象繁华中心，以现代设计美学融合传统待客之道，打造极致奢华体验。挑高十米的酒店大堂配以艺术装饰，彰显非凡格调。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- 餐饮美食部分 -->
-    <div id="dining">
-        <h2 class="section-title">餐饮美食</h2>
-        <p>我们提供世界各地的美食，精致的餐厅为您带来不一样的味蕾体验。</p>
-    </div>
+    <!-- 餐饮美食 -->
+    <section id="dining" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="section-title animate">餐饮美食</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 animate">
+                    <div class="card feature-card h-100">
+                        <img src="pic/6.png" class="card-img-top gallery-img" alt="餐厅">
+                        <img src="pic/7.png" class="card-img-top gallery-img" alt="餐厅">
+                        <div class="card-body">
+                            <h5 class="card-title">高级餐厅</h5>
+                            <p class="card-text">多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多餐饮卡片 -->
+            </div>
+        </div>
+    </section>
 
-    <!-- 休闲设施部分 -->
-    <div id="facilities">
-        <h2 class="section-title">休闲设施</h2>
-        <p>酒店内设有豪华的健身中心、游泳池及其他休闲设施，供您放松身心。</p>
-    </div>
+    <!-- 休闲设施 -->
+    <section id="facilities" class="bg-light py-5">
+        <div class="container text-center">
+            <h2 class="section-title animate">休闲设施</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4 animate">
+                    <div class="card feature-card h-100">
+                        <img src="pic/9.png" class="card-img-top gallery-img" alt="无边泳池">
+                        <img src="pic/10.png" class="card-img-top gallery-img" alt="高级会议室">
+                        <div class="card-body">
+                            <h5 class="card-title">休闲设施</h5>
+                            <p class="card-text">店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。此外，雅典饭店还设有功能齐全的会议室，先进的视听设备和高速网络，能满足各类商务会议和活动的需求。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 更多休闲设施卡片 -->
+            </div>
+        </div>
+    </section>
 
-    <!-- 引入Bootstrap和自定义JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>地址：老挝万象市中心雅典大道1号</p>
+            <p>电话：+856-21-1234567 | 邮箱：info@athenshotel.la</p>
+            <p>© 2023 雅典饭店 版权所有</p>
+        </div>
+    </footer>
 
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 滚动动画触发
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[class*="animate"]').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
