@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', function() {
     sections.forEach(section => {
       const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < window.innerHeight / 1.5) {
+      if (sectionTop < window.innerHeight * 0.75) {
         section.classList.add('fade-in');
       }
     });
