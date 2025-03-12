@@ -15,10 +15,10 @@
         }
         
         header {
-            background-image: url('https://source.unsplash.com/1920x1080/?hotel');
+            background-image: url('https://source.unsplash.com/1920x1080/?luxury-hotel');
             background-size: cover;
             background-position: center;
-            padding: 80px 20px;
+            padding: 100px 20px;
             color: white;
             text-align: center;
         }
@@ -30,11 +30,12 @@
 
         header p {
             font-size: 1.5em;
+            margin-top: 10px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2em;
+            font-size: 2.5em;
             margin: 40px 0;
         }
 
@@ -44,36 +45,31 @@
             padding: 0 20px;
         }
 
-        .facility {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .facility-item {
-            width: 30%;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .facility-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .facility-item img {
+        .facility img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        .facility-item h3 {
-            margin-top: 15px;
-            font-size: 1.4em;
+        .hotel-intro, .facilities, .services {
+            margin-bottom: 60px;
+        }
+
+        .hotel-intro p, .facilities p, .services p {
+            font-size: 1.1em;
+            line-height: 1.8em;
+        }
+
+        .facility {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .facility-item {
+            width: 48%;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -106,47 +102,51 @@
     </header>
 
     <!-- Hotel Introduction Section -->
-    <div class="section-content">
+    <div class="section-content hotel-intro">
         <h2 class="section-title">关于雅典饭店</h2>
-        <p>位于老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。酒店拥有现代感十足的设计，充满奢华氛围，旨在为每一位宾客提供难忘的住宿体验。</p>
+        <p>雅典饭店位于老挝万象的繁华中心，犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
     </div>
 
-    <!-- Facilities Section -->
-    <div class="section-content">
+    <!-- Hotel Facilities Section -->
+    <div class="section-content facilities">
         <h2 class="section-title">酒店设施</h2>
         <div class="facility">
             <div class="facility-item">
-                <img src="https://source.unsplash.com/400x300/?luxury-room" alt="客房">
+                <img src="https://source.unsplash.com/800x600/?hotel-room" alt="精致客房">
                 <h3>精致客房</h3>
-                <p>每间客房都经过精心设计，拥有全景落地窗，让您尽享万象的美景。</p>
+                <p>每间客房都经过精心设计，宽敞明亮，拥有全景落地窗，让您尽享万象的美景。柔软的大床和高品质床品让您一夜安眠。</p>
             </div>
             <div class="facility-item">
-                <img src="https://source.unsplash.com/400x300/?restaurant" alt="餐饮">
-                <h3>美食餐饮</h3>
-                <p>多个特色餐厅，提供丰富的美食选择，满足不同宾客的味蕾需求。</p>
+                <img src="https://source.unsplash.com/800x600/?restaurant" alt="餐饮">
+                <h3>精致餐饮</h3>
+                <p>雅典饭店提供多个特色餐厅，精致的中餐包间和世界各地美食的自助餐厅，满足您的各种味蕾需求。</p>
             </div>
+        </div>
+        <div class="facility">
             <div class="facility-item">
-                <img src="https://source.unsplash.com/400x300/?fitness" alt="健身中心">
+                <img src="https://source.unsplash.com/800x600/?fitness" alt="健身中心">
                 <h3>健身中心</h3>
-                <p>设备齐全的健身中心，让您在旅途中保持良好的运动习惯。</p>
+                <p>先进的健身设施和设备，为您的健康保驾护航，让您在旅行中保持活力。</p>
             </div>
             <div class="facility-item">
-                <img src="https://source.unsplash.com/400x300/?swimming-pool" alt="泳池">
+                <img src="https://source.unsplash.com/800x600/?swimming-pool" alt="泳池">
                 <h3>无边泳池</h3>
-                <p>清澈的泳池是休闲放松的理想场所，畅游其中尽享惬意时光。</p>
+                <p>清澈湛蓝的无边泳池是休闲放松的绝佳去处，您可以在泳池中尽情畅游，享受惬意时光。</p>
             </div>
+        </div>
+        <div class="facility">
             <div class="facility-item">
-                <img src="https://source.unsplash.com/400x300/?conference-room" alt="会议室">
-                <h3>会议室</h3>
-                <p>功能齐全的会议室配备先进的视听设备和高速网络，适合各种商务活动。</p>
+                <img src="https://source.unsplash.com/800x600/?conference-room" alt="会议室">
+                <h3>功能齐全的会议室</h3>
+                <p>设施齐全的会议室，配备了先进的视听设备和高速网络，适用于各类商务会议和活动。</p>
             </div>
         </div>
     </div>
 
-    <!-- Service Section -->
-    <div class="section-content">
+    <!-- Professional Service Section -->
+    <div class="section-content services">
         <h2 class="section-title">专业服务</h2>
-        <p>雅典饭店的工作人员始终为您提供细心体贴的服务，从入住到退房的每一刻，我们致力于为您提供一段舒适、难忘的入住体验。</p>
+        <p>雅典饭店的工作人员热情友好、细心体贴。无论您是入住还是退房，我们始终在每一个环节为您提供贴心的服务，确保您在这里拥有舒适、难忘的住宿体验。</p>
     </div>
 
     <!-- Footer -->
