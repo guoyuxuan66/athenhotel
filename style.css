@@ -109,3 +109,12 @@ footer {
 a:hover {
   color: #ff8c00;
 }
+/* 滚动动画效果 */
+.section.fade-in {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.section {
+  opacity: 0;
+}
