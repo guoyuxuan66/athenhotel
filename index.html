@@ -14,11 +14,12 @@
             color: #333;
         }
         
+        /* Header Section */
         header {
             background-image: url('https://source.unsplash.com/1920x1080/?luxury-hotel');
             background-size: cover;
             background-position: center;
-            padding: 100px 20px;
+            padding: 80px 20px;
             color: white;
             text-align: center;
         }
@@ -26,19 +27,23 @@
         header h1 {
             font-size: 3em;
             margin: 0;
+            color: black; /* Black color for hotel name */
         }
 
         header p {
             font-size: 1.5em;
             margin-top: 10px;
+            color: white;
         }
 
+        /* Section Titles */
         .section-title {
             text-align: center;
             font-size: 2.5em;
             margin: 40px 0;
         }
 
+        /* Section Content */
         .section-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -61,15 +66,14 @@
             line-height: 1.8em;
         }
 
+        /* Facility List */
         .facility {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            list-style: none;
+            padding: 0;
         }
 
         .facility-item {
-            width: 48%;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         footer {
@@ -87,8 +91,12 @@
         }
 
         @media (max-width: 768px) {
-            .facility-item {
-                width: 100%;
+            header {
+                padding: 60px 20px;
+            }
+
+            .section-title {
+                font-size: 2em;
             }
         }
     </style>
@@ -110,37 +118,33 @@
     <!-- Hotel Facilities Section -->
     <div class="section-content facilities">
         <h2 class="section-title">酒店设施</h2>
-        <div class="facility">
-            <div class="facility-item">
+        <ul class="facility">
+            <li class="facility-item">
                 <img src="https://source.unsplash.com/800x600/?hotel-room" alt="精致客房">
                 <h3>精致客房</h3>
                 <p>每间客房都经过精心设计，宽敞明亮，拥有全景落地窗，让您尽享万象的美景。柔软的大床和高品质床品让您一夜安眠。</p>
-            </div>
-            <div class="facility-item">
+            </li>
+            <li class="facility-item">
                 <img src="https://source.unsplash.com/800x600/?restaurant" alt="餐饮">
                 <h3>精致餐饮</h3>
                 <p>雅典饭店提供多个特色餐厅，精致的中餐包间和世界各地美食的自助餐厅，满足您的各种味蕾需求。</p>
-            </div>
-        </div>
-        <div class="facility">
-            <div class="facility-item">
+            </li>
+            <li class="facility-item">
                 <img src="https://source.unsplash.com/800x600/?fitness" alt="健身中心">
                 <h3>健身中心</h3>
                 <p>先进的健身设施和设备，为您的健康保驾护航，让您在旅行中保持活力。</p>
-            </div>
-            <div class="facility-item">
+            </li>
+            <li class="facility-item">
                 <img src="https://source.unsplash.com/800x600/?swimming-pool" alt="泳池">
                 <h3>无边泳池</h3>
                 <p>清澈湛蓝的无边泳池是休闲放松的绝佳去处，您可以在泳池中尽情畅游，享受惬意时光。</p>
-            </div>
-        </div>
-        <div class="facility">
-            <div class="facility-item">
+            </li>
+            <li class="facility-item">
                 <img src="https://source.unsplash.com/800x600/?conference-room" alt="会议室">
                 <h3>功能齐全的会议室</h3>
                 <p>设施齐全的会议室，配备了先进的视听设备和高速网络，适用于各类商务会议和活动。</p>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 
     <!-- Professional Service Section -->
