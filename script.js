@@ -1,11 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const sections = document.querySelectorAll('.section');
-  window.addEventListener('scroll', function() {
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < window.innerHeight * 0.75) {
-        section.classList.add('fade-in');
-      }
-    });
+document.addEventListener('DOMContentLoaded', function() {
+  // 滚动动画效果
+  const ctaButton = document.querySelector('.cta-button');
+  ctaButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
   });
 });
