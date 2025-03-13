@@ -80,16 +80,21 @@ body {
     border-radius: 8px;
     transition: transform 0.3s;
 }
-.qr-code:hover {
-    transform: translateY(-3px);
+.qr-code {
+    flex-shrink: 0;
+    border: 3px solid white; /* 加粗边框 */
+    border-radius: 12px; /* 增大圆角 */
+    transition: transform 0.3s;
+    object-fit: cover; /* 保持图片比例 */
 }
 
 @media (max-width: 768px) {
     .qr-code {
-        height: 100px !important;
+        height: 120px !important;
+        width: 120px !important;
     }
-    .gap-3 {
-        gap: 1rem !important;
+    .gap-4 {
+        gap: 2rem !important; /* 移动端保持较大间距 */
     }
 }
     
@@ -288,9 +293,9 @@ body {
             
             <!-- 新增二维码 -->
             <div class="col-md-4 mt-4 mt-md-0">
-                <div class="d-flex justify-content-center gap-3">
-                        <img src="pic/11.jpg" alt="销售经理" class="qr-code" style="height: 120px;">
-                        <img src="pic/12.jpg" alt="销售经理" class="qr-code" style="height: 120px;">
+                <div class="d-flex justify-content-center gap-4">
+                        <img src="pic/11.jpg" alt="销售经理" class="qr-code" style="height: 140px;width:140px">
+                        <img src="pic/12.jpg" alt="销售经理" class="qr-code" style="height: 140px;width:140px">
                     </div>
                 </div>
             </div>
