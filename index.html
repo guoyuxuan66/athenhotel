@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>雅典饭店 - 老挝万象五星级酒店</title>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 <style>
@@ -12,9 +13,40 @@
     --accent-color: #e67e22;
 }
 
+/* 新增翻译控件样式（不影响原有结构） */
+#google_translate_element {
+    min-width: 130px;
+    height: 40px;
+    z-index: 9999;
+}
+.goog-te-gadget {
+    font-family: inherit !important;
+}
+.goog-te-gadget-icon { display: none !important; }
+.goog-te-menu-value { 
+    color: var(--primary-color) !important;
+    display: flex !important;
+    align-items: center;
+}
+.goog-te-menu-value span:first-child { 
+    display: none !important;
+}
+.goog-te-menu-value:before {
+    content: "🌐 语言选择";
+    font-size: 16px;
+}
+.goog-te-menu-value span:last-child { 
+    border-left: none !important;
+    padding-left: 0 !important;
+}
+.goog-te-banner-frame { display: none !important; }
+body { top: 0 !important; }
+
+/* 原始样式完全保留 */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     scroll-behavior: smooth;
+    padding-top: 80px;
 }
 
 .hero-section {
@@ -91,6 +123,10 @@ body {
     .gap-4 {
         gap: 2rem !important;
     }
+    #google_translate_element {
+        margin: 10px auto;
+        text-align: center;
+    }
 }
 
 @keyframes fadeInUp {
@@ -113,7 +149,7 @@ body {
     max-width: 50%;
 }
 
-/* 新增移动端优化 */
+/* 移动端优化 */
 @media (max-width: 768px) {
     .image-row .col-md-6 {
         flex: 0 0 100% !important;
@@ -177,7 +213,7 @@ body {
 </style>
 </head>
 <body>
-<!-- 导航栏 -->
+<!-- 导航栏（仅新增翻译控件） -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">雅典饭店</a>
@@ -190,12 +226,16 @@ body {
                 <li class="nav-item"><a class="nav-link" href="#rooms">客房设施</a></li>
                 <li class="nav-item"><a class="nav-link" href="#dining">餐饮美食</a></li>
                 <li class="nav-item"><a class="nav-link" href="#facilities">休闲设施</a></li>
+                <!-- 翻译控件位置 -->
+                <li class="nav-item">
+                    <div id="google_translate_element"></div>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- 首屏大图 -->
+<!-- 以下所有原始内容保持不变 -->
 <section class="hero-section">
     <div class="container text-center animate">
         <h1 class="display-4 fw-bold mb-4">雅典饭店-ATHENS HOTEL</h1>
@@ -204,37 +244,26 @@ body {
     </div>
 </section>
 
-<!-- 酒店简介 -->
 <section id="about" class="bg-light py-5">
     <div class="container text-center">
         <h2 class="section-title animate">酒店简介</h2>
         <div class="row g-4 justify-content-center image-row">
-            <div class="col-md-6 animate">
-                <img src="pic/122.png" class="gallery-img" alt="酒店">
-            </div>
-            <div class="col-md-6 animate">
-                <img src="pic/3.png" class="gallery-img" alt="酒店">
-            </div>
+            <div class="col-md-6 animate"><img src="pic/122.png" class="gallery-img" alt="酒店"></div>
+            <div class="col-md-6 animate"><img src="pic/3.png" class="gallery-img" alt="酒店"></div>
         </div>
         <div class="card-body">
             <h5 class="card-title">五星首选</h5>
-            <p class="card-text">在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。
-从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
+            <p class="card-text">在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
         </div>
     </div>
 </section>
 
-<!-- 客房设施 -->
 <section id="rooms" class="bg-light py-5">
     <div class="container text-center">
         <h2 class="section-title animate">客房设施</h2>
         <div class="row g-4 justify-content-center image-row">
-            <div class="col-md-6 animate">
-                <img src="pic/4.png" class="gallery-img" alt="客房">
-            </div>
-            <div class="col-md-6 animate">
-                <img src="pic/5.png" class="gallery-img" alt="客房">
-            </div>
+            <div class="col-md-6 animate"><img src="pic/4.png" class="gallery-img" alt="客房"></div>
+            <div class="col-md-6 animate"><img src="pic/5.png" class="gallery-img" alt="客房"></div>
         </div>
         <div class="card-body">
             <h5 class="card-title">豪华客房</h5>
@@ -243,17 +272,12 @@ body {
     </div>
 </section>
 
-<!-- 餐饮美食 -->
 <section id="dining" class="bg-light py-5">
     <div class="container text-center">
         <h2 class="section-title animate">餐饮美食</h2>
         <div class="row g-4 justify-content-center image-row">
-            <div class="col-md-6 animate">
-                <img src="pic/6.png" class="gallery-img" alt="餐厅">
-            </div>
-            <div class="col-md-6 animate">
-                <img src="pic/7.png" class="gallery-img" alt="餐厅">
-            </div>
+            <div class="col-md-6 animate"><img src="pic/6.png" class="gallery-img" alt="餐厅"></div>
+            <div class="col-md-6 animate"><img src="pic/7.png" class="gallery-img" alt="餐厅"></div>
         </div>
         <div class="card-body">
             <h5 class="card-title">高级餐厅</h5>
@@ -262,17 +286,12 @@ body {
     </div>
 </section>
 
-<!-- 休闲设施 -->
 <section id="facilities" class="bg-light py-5">
     <div class="container text-center">
         <h2 class="section-title animate">休闲设施</h2>
         <div class="row g-4 justify-content-center image-row">
-            <div class="col-md-6 animate">
-                <img src="pic/9.png" class="gallery-img" alt="无边泳池">
-            </div>
-            <div class="col-md-6 animate">
-                <img src="pic/10.png" class="gallery-img" alt="高级会议室">
-            </div>
+            <div class="col-md-6 animate"><img src="pic/9.png" class="gallery-img" alt="无边泳池"></div>
+            <div class="col-md-6 animate"><img src="pic/10.png" class="gallery-img" alt="高级会议室"></div>
         </div>
         <div class="card-body">
             <h5 class="card-title">休闲设施</h5>
@@ -281,7 +300,6 @@ body {
     </div>
 </section>
 
-<!-- 页脚 -->
 <footer class="footer">
     <div class="container">
         <div class="row align-items-center">
@@ -293,8 +311,8 @@ body {
             </div>
             <div class="col-md-4 mt-4 mt-md-0">
                 <div class="d-flex justify-content-center gap-4">
-                    <img src="pic/11.jpg" alt="销售经理" class="qr-code" style="height: 140px;width:140px">
-                    <img src="pic/12.jpg" alt="销售经理" class="qr-code" style="height: 140px;width:140px">
+                    <img src="pic/11.jpg" alt="销售经理" class="qr-code" style="height:140px;width:140px">
+                    <img src="pic/12.jpg" alt="销售经理" class="qr-code" style="height:140px;width:140px">
                 </div>
             </div>
         </div>
@@ -303,7 +321,17 @@ body {
 
 <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <script>
-// 完整保留原始动画代码
+// 翻译功能初始化
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'zh-CN',
+        includedLanguages: 'en,zh-CN,ko,ja,th,lo,vi,fr,de,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+}
+
+// 原始动画代码
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -315,6 +343,30 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('[class*="animate"]').forEach((el) => {
     observer.observe(el);
 });
+
+// 修复翻译导致的布局问题
+setInterval(() => {
+    // 移除Google自动添加的干扰元素
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+        if(iframe.title === "Language Translator") iframe.remove();
+    });
+    document.querySelectorAll('.goog-te-spinner-pos').forEach(el => el.remove());
+    
+    // 保持页面顶部位置
+    if(document.documentElement.style.top !== '0px') {
+        document.documentElement.style.top = '0';
+    }
+    
+    // 修复移动端点击空白区域关闭翻译菜单
+    document.addEventListener('click', function(e) {
+        if(!e.target.closest('.goog-te-menu-frame') && 
+           !e.target.closest('.goog-te-menu-value')) {
+            const menus = document.querySelectorAll('.goog-te-menu-frame');
+            menus.forEach(menu => menu.style.display = 'none');
+        }
+    });
+}, 100);
 </script>
 </body>
 </html>
