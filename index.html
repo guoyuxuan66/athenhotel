@@ -1,281 +1,320 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雅典饭店 - 老挝万象五星级酒店</title>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet>
-    <style>
-    :root {
-        --primary-color: #2c3e50;
-        --accent-color: #e67e22;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅典饭店 - 老挝万象五星级酒店</title>
+<link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #e67e22;
+}
 
-    /* 翻译相关样式 */
-    .translate-btn {
-        background: var(--primary-color);
-        color: white !important;
-        border-radius: 20px;
-        padding: 8px 20px !important;
-        margin-left: 15px;
-        transition: all 0.3s;
-        border: none;
-        cursor: pointer;
-        min-width: 120px;
-    }
-    .goog-te-gadget-icon { display: none !important; }
-    .goog-te-menu-value { color: transparent !important; }
-    .goog-te-menu-value:before { 
-        content: "🌐 选择语言";
-        color: white !important;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    .goog-te-banner-frame { display: none !important; }
-    body { top: 0 !important; }
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
 
-    /* 原始样式 */
-    body {
-        font-family: 'Segoe UI', Arial, sans-serif;
-        scroll-behavior: smooth;
-    }
-    .hero-section {
-        height: 100vh;
-        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('pic/2.png') center/cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-    }
-    .section-title {
-        color: var(--primary-color);
-        border-left: 5px solid var(--accent-color);
-        padding-left: 1rem;
-        margin: 3rem 0;
-        text-align: center;
-    }
-    .feature-card {
-        transition: transform 0.3s;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .feature-card:hover {
-        transform: translateY(-5px);
-    }
-    .amenities-icon {
-        font-size: 2.5rem;
-        color: var(--accent-color);
-        margin-bottom: 1rem;
-    }
-    .gallery-img {
-        height: 400px;
-        width: 100%;
-        object-fit: cover;
-        transition: transform 0.3s;
-        margin-right: 15px;
-    }
-    .gallery-img:hover {
-        transform: scale(1.05);
-    }
-    .navbar {
-        background: rgba(255,255,255,0.95) !important;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .footer {
-        background: var(--primary-color);
-        color: white;
-        padding: 3rem 0;
-        text-align: center;
-    }
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('pic/2.png') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.section-title {
+    color: var(--primary-color);
+    border-left: 5px solid var(--accent-color);
+    padding-left: 1rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.feature-card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.amenities-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.gallery-img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+    margin-right: 15px;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+
+.navbar {
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.qr-code {
+    flex-shrink: 0;
+    border: 3px solid white;
+    border-radius: 12px;
+    transition: transform 0.3s;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
     .qr-code {
-        flex-shrink: 0;
-        border: 3px solid white;
-        border-radius: 12px;
-        transition: transform 0.3s;
-        object-fit: cover;
+        height: 120px !important;
+        width: 120px !important;
     }
-    @media (max-width: 768px) {
-        .qr-code { height: 120px !important; width: 120px !important; }
-        .gap-4 { gap: 2rem !important; }
-        .translate-btn { margin: 10px 0; width: 100%; }
+    .gap-4 {
+        gap: 2rem !important;
     }
-    @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .animate {
-        animation: fadeInUp 0.8s ease-out forwards;
-    }
-    .image-row {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-row .col-md-6 {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* 新增移动端优化 */
+@media (max-width: 768px) {
     .image-row .col-md-6 {
-        flex: 1;
-        max-width: 50%;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
     }
-    @media (max-width: 768px) {
-        .image-row .col-md-6 { flex: 0 0 100% !important; max-width: 100% !important; }
-        .gallery-img { height: 280px; margin-right: 0; margin-bottom: 20px; }
-        .hero-section { height: 80vh; }
-        .navbar-nav { text-align: center; }
-        .navbar-collapse { text-align: center; }
-        .section-title { font-size: 1.5rem; }
-        .container { padding: 0 15px; }
-        .hero-section h1 { font-size: 2.5rem; }
-        .hero-section p { font-size: 1.25rem; }
+    
+    .gallery-img {
+        height: 280px;
+        margin-right: 0;
+        margin-bottom: 20px;
     }
-    @media (max-width: 576px) {
-        .hero-section h1 { font-size: 2rem; }
-        .hero-section p { font-size: 1rem; }
-        .container { padding: 0 10px; }
-        .gallery-img { height: 250px; }
+    
+    .hero-section {
+        height: 80vh;
     }
-    </style>
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-collapse {
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .gallery-img {
+        height: 250px;
+    }
+}
+</style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">雅典饭店</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">酒店简介</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#rooms">客房设施</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#dining">餐饮美食</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#facilities">休闲设施</a></li>
-                    <li class="nav-item">
-                        <div id="google_translate_element" class="translate-btn"></div>
-                    </li>
-                </ul>
+<!-- 导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">雅典饭店</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">酒店简介</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rooms">客房设施</a></li>
+                <li class="nav-item"><a class="nav-link" href="#dining">餐饮美食</a></li>
+                <li class="nav-item"><a class="nav-link" href="#facilities">休闲设施</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 首屏大图 -->
+<section class="hero-section">
+    <div class="container text-center animate">
+        <h1 class="display-4 fw-bold mb-4">雅典饭店-ATHENS HOTEL</h1>
+        <p class="lead">万象市中心五星级奢华体验</p>
+        <p class="h5">源于名门，心系雅典</p>
+    </div>
+</section>
+
+<!-- 酒店简介 -->
+<section id="about" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="section-title animate">酒店简介</h2>
+        <div class="row g-4 justify-content-center image-row">
+            <div class="col-md-6 animate">
+                <img src="pic/122.png" class="gallery-img" alt="酒店">
+            </div>
+            <div class="col-md-6 animate">
+                <img src="pic/3.png" class="gallery-img" alt="酒店">
             </div>
         </div>
-    </nav>
-
-    <section class="hero-section">
-        <div class="container text-center animate">
-            <h1 class="display-4 fw-bold mb-4">雅典饭店-ATHENS HOTEL</h1>
-            <p class="lead">万象市中心五星级奢华体验</p>
-            <p class="h5">源于名门，心系雅典</p>
+        <div class="card-body">
+            <h5 class="card-title">五星首选</h5>
+            <p class="card-text">在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。
+从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="about" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="section-title animate">酒店简介</h2>
-            <div class="row g-4 justify-content-center image-row">
-                <div class="col-md-6 animate"><img src="pic/122.png" class="gallery-img" alt="酒店"></div>
-                <div class="col-md-6 animate"><img src="pic/3.png" class="gallery-img" alt="酒店"></div>
+<!-- 客房设施 -->
+<section id="rooms" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="section-title animate">客房设施</h2>
+        <div class="row g-4 justify-content-center image-row">
+            <div class="col-md-6 animate">
+                <img src="pic/4.png" class="gallery-img" alt="客房">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">五星首选</h5>
-                <p class="card-text">在老挝万象的繁华中心，雅典饭店犹如一颗熠熠生辉的宝石，静静绽放着五星级的魅力。从外观上看，雅典饭店气势恢宏，现代感十足的建筑线条简洁流畅，与蓝天白云相互映衬，格外引人注目。步入大堂，挑高的空间搭配时尚精致的装修，彰显着不凡的格调，让人瞬间感受到奢华的氛围。</p>
+            <div class="col-md-6 animate">
+                <img src="pic/5.png" class="gallery-img" alt="客房">
             </div>
         </div>
-    </section>
+        <div class="card-body">
+            <h5 class="card-title">豪华客房</h5>
+            <p class="card-text">客房是雅典饭店的一大亮点。每间客房都经过精心设计，宽敞明亮，全景落地窗不仅让充足的阳光洒满房间，还能让宾客将万象的城市风光或自然美景尽收眼底。柔软舒适的大床搭配高品质床品，助您一夜好眠；智能化的家居设备，满足您对便捷生活的所有需求。</p>
+        </div>
+    </div>
+</section>
 
-    <section id="rooms" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="section-title animate">客房设施</h2>
-            <div class="row g-4 justify-content-center image-row">
-                <div class="col-md-6 animate"><img src="pic/4.png" class="gallery-img" alt="客房"></div>
-                <div class="col-md-6 animate"><img src="pic/5.png" class="gallery-img" alt="客房"></div>
+<!-- 餐饮美食 -->
+<section id="dining" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="section-title animate">餐饮美食</h2>
+        <div class="row g-4 justify-content-center image-row">
+            <div class="col-md-6 animate">
+                <img src="pic/6.png" class="gallery-img" alt="餐厅">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">豪华客房</h5>
-                <p class="card-text">客房是雅典饭店的一大亮点。每间客房都经过精心设计，宽敞明亮，全景落地窗不仅让充足的阳光洒满房间，还能让宾客将万象的城市风光或自然美景尽收眼底。柔软舒适的大床搭配高品质床品，助您一夜好眠；智能化的家居设备，满足您对便捷生活的所有需求。</p>
+            <div class="col-md-6 animate">
+                <img src="pic/7.png" class="gallery-img" alt="餐厅">
             </div>
         </div>
-    </section>
+        <div class="card-body">
+            <h5 class="card-title">高级餐厅</h5>
+            <p class="card-text">餐饮方面，这里拥有多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
+        </div>
+    </div>
+</section>
 
-    <section id="dining" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="section-title animate">餐饮美食</h2>
-            <div class="row g-4 justify-content-center image-row">
-                <div class="col-md-6 animate"><img src="pic/6.png" class="gallery-img" alt="餐厅"></div>
-                <div class="col-md-6 animate"><img src="pic/7.png" class="gallery-img" alt="餐厅"></div>
+<!-- 休闲设施 -->
+<section id="facilities" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="section-title animate">休闲设施</h2>
+        <div class="row g-4 justify-content-center image-row">
+            <div class="col-md-6 animate">
+                <img src="pic/9.png" class="gallery-img" alt="无边泳池">
             </div>
-            <div class="card-body">
-                <h5 class="card-title">高级餐厅</h5>
-                <p class="card-text">餐饮方面，这里拥有多个各具特色的餐厅。精致的中餐包间，为您提供地道的中式美味；优雅的自助餐厅，汇聚了世界各地的美食佳肴，满足不同宾客的味蕾。无论是商务宴请还是家庭聚餐，都能在这里找到理想之选。</p>
+            <div class="col-md-6 animate">
+                <img src="pic/10.png" class="gallery-img" alt="高级会议室">
             </div>
         </div>
-    </section>
-
-    <section id="facilities" class="bg-light py-5">
-        <div class="container text-center">
-            <h2 class="section-title animate">休闲设施</h2>
-            <div class="row g-4 justify-content-center image-row">
-                <div class="col-md-6 animate"><img src="pic/9.png" class="gallery-img" alt="无边泳池"></div>
-                <div class="col-md-6 animate"><img src="pic/10.png" class="gallery-img" alt="高级会议室"></div>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">休闲设施</h5>
-                <p class="card-text">酒店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。此外，雅典饭店还设有功能齐全的会议室，先进的视听设备和高速网络，能满足各类商务会议和活动的需求。</p>
-            </div>
+        <div class="card-body">
+            <h5 class="card-title">休闲设施</h5>
+            <p class="card-text">酒店的休闲设施同样令人称赞。设施完备的健身中心，配备了先进的健身器材，让您在旅途中也能保持良好的运动习惯；而那片清澈湛蓝的无边泳池，更是休闲放松的绝佳去处，畅游其中，尽享惬意时光。此外，雅典饭店还设有功能齐全的会议室，先进的视听设备和高速网络，能满足各类商务会议和活动的需求。</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-8 text-center">
-                    <p>地址：万象市 T2路 </p>
-                    <p>T2 ROAD, VIENTIANE CITY</p>
-                    <p>电话：021288888 </p>
-                    <p>© 2025 雅典饭店 版权所有</p>
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-8 text-center">
+                <p>地址：万象市 T2路 </p>
+                <p>T2 ROAD, VIENTIANE CITY</p>
+                <p>电话：021288888 </p>
+                <p>© 2025 雅典饭店 版权所有</p>
+            </div>
+            <div class="col-md-4 mt-4 mt-md-0">
+                <div class="d-flex justify-content-center gap-4">
+                    <img src="pic/11.jpg" alt="销售经理" class="qr-code" style="height: 140px;width:140px">
+                    <img src="pic/12.jpg" alt="销售经理" class="qr-code" style="height: 140px;width:140px">
                 </div>
-                <div class="col-md-4 mt-4 mt-md-0">
-                    <div class="d-flex justify-content-center gap-4">
-                        <img src="pic/11.jpg" alt="销售经理" class="qr-code" style="height:140px;width:140px">
-                        <img src="pic/12.jpg" alt="销售经理" class="qr-code" style="height:140px;width:140px">
-                    </div>
-                </div>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-            pageLanguage: 'zh-CN',
-            includedLanguages: 'en,zh-CN,ko,ja,th,lo,vi,fr,de,es',
-            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-            autoDisplay: false
-        }, 'google_translate_element');
-        
-        // 解决移动端点击空白关闭问题
-        document.querySelector('body').addEventListener('click', function(e) {
-            if(e.target.closest('.goog-te-menu-value')) return;
-            const frame = document.querySelector('.goog-te-menu-frame');
-            if(frame) frame.style.display = 'none';
-        });
-    }
+<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+// 完整保留原始动画代码
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}, { threshold: 0.1 });
 
-    // 原始动画代码
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('animate');
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('[class*="animate"]').forEach((el) => observer.observe(el));
-
-    // 解决翻译导致的布局问题
-    setInterval(() => {
-        const html = document.querySelector('html');
-        if(html.style.top !== '0') html.style.top = '0';
-        document.querySelectorAll('.goog-te-gadget').forEach(el => {
-            el.innerHTML = el.innerHTML.replace(/<span[^>]*><\/span>/g, '');
-        });
-    }, 500);
-    </script>
+document.querySelectorAll('[class*="animate"]').forEach((el) => {
+    observer.observe(el);
+});
+</script>
 </body>
 </html>
